@@ -92,10 +92,7 @@ const ingredients = obj => {
   Find the smallest number of the three and return that number.
 */
 
-const largeNumbers = ( {first, second, third}) => {
-  console.log(first, second, third)
-  (first < second && first < third) ? first : (second < first && second < third) ? second : third
-}
+const largeNumbers = ( {first, second, third}) => (first < second && first < third) ? first : (second < first && second < third) ? second : third
 
 
 
@@ -107,9 +104,6 @@ const largeNumbers = ( {first, second, third}) => {
   Find the longest array and return that array.
 */
 
-const numberGroups = ({a, b, c}) => {
-  console.log(a, b, c)
-  (a.length < b.length && a.length < c.length) ? a : (b.length < a.length && b.length < c.length) ? b : c
-}
+const numberGroups = ({a, b, c}) => (a.length > b.length && a.length > c.length)? a : (b.length > a.length && b.length > c.length)? b : c
 
 
