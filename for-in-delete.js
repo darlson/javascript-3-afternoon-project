@@ -161,7 +161,7 @@ for (let key in deleteTheBigNumbers){
 }
 
 
-
+ 
 ////////// PROBLEM 7 //////////
 
 /*
@@ -175,8 +175,7 @@ const startsWithK = obj => {
   for (let key in obj) {
     if (key.startsWith("k"))
     delete obj[key]
-  }
-  return obj
+  } return obj
 }
 
 
