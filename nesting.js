@@ -50,7 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+const employeeUpdater = () => {
+  for (let i = 0; i < employees.length; i++){
+    if (employees[i].firstName === "Theo") {
+      delete employees[i].firstName
+    } if (employees[i].firstName === "Lorie") {
+      employees[i].department = "HR"
+    }
+  } return employees
+}
+
+
+
+employeeUpdater()
 
 
 
@@ -157,6 +169,12 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+const looper = () => {
+  numsArr.forEach(e => e.forEach((f,i) => {
+    if(f % 2 === 0) {e[i] = 'even'}
+    else{e[i] = 'odd'}
+  }))
+  return numsArr
+}
 
 
