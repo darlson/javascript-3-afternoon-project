@@ -174,7 +174,7 @@ for (let key in deleteTheBigNumbers){
 
 const startsWithK = obj => {
   for (let key in obj) {
-    if (key.startsWith("k"))
+    if (key.toLowerCase().startsWith("k"))
     delete obj[key]
   } return obj
 }
