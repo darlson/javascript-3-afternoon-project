@@ -44,7 +44,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
   The map function also takes a callback with the parameters
   function(element, index, wholeArray){}  Function Form
-  (element, index, wholeArray)=>{}    Arrow Form
+  (element, index, wholeArray)=>{}    Arrow Formw
 */
 
 //Code Here
