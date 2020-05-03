@@ -62,34 +62,6 @@ const employeeUpdater = () => {
 
 employeeUpdater()
 
-// // Jeff
-// const employeeUpdater = () => {
-//   let rArr = employees.reduce((acc, element) => {
-//     if (element.firstName === 'Theo') {
-//       return [...acc]
-//     } else if (element.firstName === 'Lorie') {
-//       element.department = 'HR'
-//       return [...acc, element]
-//     } else {
-//       return [...acc, element]
-//     }
-//   }, [])
-//   return rArr
-// }
-
-// //Snell
-// const employeeUpdater = () => {
-//   employees.forEach((employee, index, array) => {
-//     if (employee['firstName'] === 'Theo') {
-//       array.splice(index, 1)
-//     } else if (employee['firstName'] === 'Lorie') {
-//       employee['department'] = 'HR'
-//     }
-//   })
-//   return employees
-// }
-
-
 
 ////////// PROBLEM 2 //////////
 
