@@ -54,7 +54,7 @@ function greeting( obj ) {
 */
 
 const totalPopulation = (obj) => {
-  const{utah, california, texas, arizona} = obj
+  let{utah, california, texas, arizona} = obj
   return utah + california + texas + arizona
 }
 
@@ -105,5 +105,4 @@ const largeNumbers = ( {first, second, third}) => (first < second && first < thi
 */
 
 const numberGroups = ({a, b, c}) => (a.length > b.length && a.length > c.length)? a : (b.length > a.length && b.length > c.length)? b : c
-
 
