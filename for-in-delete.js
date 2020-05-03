@@ -42,7 +42,8 @@ for(var key in values) {
 function showValues( obj ) {
   let valString = ""
   for(let key in obj) {
-    valString += obj[key]
+    valString += obj[key] 
+    // valString = valString + obj[key]
   }
   return valString
 }

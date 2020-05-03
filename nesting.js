@@ -53,16 +53,41 @@ var employees = [
 const employeeUpdater = () => {
   for (let i = 0; i < employees.length; i++){
     if (employees[i].firstName === "Theo") {
-      delete employees[i].firstName
+      employees.splice(i, 1) 
     } if (employees[i].firstName === "Lorie") {
       employees[i].department = "HR"
     }
   } return employees
 }
 
-
-
 employeeUpdater()
+
+// // Jeff
+// const employeeUpdater = () => {
+//   let rArr = employees.reduce((acc, element) => {
+//     if (element.firstName === 'Theo') {
+//       return [...acc]
+//     } else if (element.firstName === 'Lorie') {
+//       element.department = 'HR'
+//       return [...acc, element]
+//     } else {
+//       return [...acc, element]
+//     }
+//   }, [])
+//   return rArr
+// }
+
+// //Snell
+// const employeeUpdater = () => {
+//   employees.forEach((employee, index, array) => {
+//     if (employee['firstName'] === 'Theo') {
+//       array.splice(index, 1)
+//     } else if (employee['firstName'] === 'Lorie') {
+//       employee['department'] = 'HR'
+//     }
+//   })
+//   return employees
+// }
 
 
 
@@ -80,7 +105,14 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+const removeDuplicates = (workplaceAccidents) => {
+  for(let i = 0; i < workplaceAccidents.length; i++){
+    for(let j = workplaceAccidents.length - 1; j > i; j--)
+    if(workplaceAccidents[i] === workplaceAccidents[j]){
+      workplaceAccidents.splice(j,1)
+    }
+  } return workplaceAccidents
+}
 
 
 
@@ -109,8 +141,9 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
+
 
 
 
@@ -150,8 +183,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
+const recordCleaner = () => {
+  for (let i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = false
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -169,12 +205,29 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
+// const looper = () => {
+//   numsArr.forEach(e => e.forEach((f,i) => {
+//     if(f % 2 === 0) {e[i] = 'even'}
+//     else{e[i] = 'odd'}
+//   }))
+//   return numsArr
+// }
+
 const looper = () => {
-  numsArr.forEach(e => e.forEach((f,i) => {
-    if(f % 2 === 0) {e[i] = 'even'}
-    else{e[i] = 'odd'}
-  }))
-  return numsArr
+  for(let i = 0; i < numsArr.length; i++){
+    for (let j = 0; j < numsArr[i].length; j++){
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i].splice(j, 1, "even")
+      } else numsArr[i].splice(j, 1, "odd")
+    }
+  } return numsArr
 }
 
+// const looper = () => {
+//   for(let i=0; i <numsArr.length; i++){
+//     for (let j=0; j < numsArr[i].length; j++){
+//       (numsArr[i][j] % 2 === 0) ? "even" : "odd"
+//     }
+//   }
+// }
 
